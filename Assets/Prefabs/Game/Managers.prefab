@@ -41,9 +41,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3874483666354539348}
-  - component: {fileID: 6004700654707750376}
+  - component: {fileID: 2958021551048689608}
   m_Layer: 0
-  m_Name: ItemManager
+  m_Name: Inventory Manager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -64,7 +64,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 3812810902366331086}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &6004700654707750376
+--- !u!114 &2958021551048689608
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -73,7 +73,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 6233014309979206930}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e15dc98d9c827f20f83d49289bfdc146, type: 3}
+  m_Script: {fileID: 11500000, guid: aeba82985450e790fa1d755c15c46caf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  items: []
+  slots: []

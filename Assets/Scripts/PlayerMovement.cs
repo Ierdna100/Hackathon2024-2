@@ -4,37 +4,19 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-
-    public bool playerFacingRight = true;
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        Debug.Log("Hello World!");
-    }
+    public CharacterController2D controller;
+    float horizontalMove = 0f;
+    public float runSpeed = 40f;
 
     // Update is called once per frame
     void Update()
     {
-        
+        horizontalMove = Input.GetAxisRaw("Horizontal") * runSpeed;
     }
 
-    void Move(float move)
+    void FixedUpdate()
     {
-        if(move > 0 && !playerFacingRight)
-        {
-            Flip();
-        }
-        else if(move < 0 && playerFacingRight)
-        {
-            Flip();
-        }
+        controller.Move(horizontalMove * Time.fixedDeltaTime);
     }
 
-    void Flip()
-    {
-        Vector2 scale = transform.localScale;
-
-        scale.
-    }
 }

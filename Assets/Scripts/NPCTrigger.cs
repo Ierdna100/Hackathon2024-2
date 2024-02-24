@@ -12,13 +12,16 @@ public class NPCTrigger : MonoBehaviour
     public BoxCollider2D NPC_Collider;
     public GameObject interactText;
     public GameObject inputPrompt;
-    public TMP_Text playerText;
+    public GameObject responseUI;
+    public GameObject player;
+    public TMP_InputField abc;
+    public string playerText;
 
     void Awake()
     {
         interactText.SetActive(false);
         InputClose();
-        playerText = GetComponent<TMP_Text>();
+        ResponseClose();
     }
 
     void Update()
@@ -26,9 +29,7 @@ public class NPCTrigger : MonoBehaviour
         if(interactText.activeInHierarchy == true && Input.GetKey(KeyCode.E))
         {
             inputPrompt.SetActive(true);
-            Debug.Log(playerText.text);
         }
-
     }
 
     private void OnTriggerEnter2D(Collider2D other)
@@ -45,5 +46,27 @@ public class NPCTrigger : MonoBehaviour
     public void InputClose()
     {
         inputPrompt.SetActive(false);
+        //Send the request to the machine
+        abc.text = "";
+    }
+
+    public void InputOpen()
+    {
+        inputPrompt.SetActive(true);
+    }
+
+    public void ResponseClose()
+    {
+        responseUI.SetActive(false);
+    }
+
+    public void ResponseOpen()
+    {
+        responseUI.SetActive(true);
+    }
+
+    public void OnUpdateText(string str)
+    {
+        playerText = str;
     }
 }

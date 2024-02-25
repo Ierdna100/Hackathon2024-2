@@ -37,6 +37,7 @@ public class NPCTrigger : MonoBehaviour
     }
     private void OnTriggerExit2D(Collider2D other)
     {
+        Debug.Log("Exited!");
         interactText.SetActive(false);
     }
 }

@@ -27,6 +27,7 @@ public class PromptManager : MonoBehaviour
 
     public void InputOpen()
     {
+        playerText = "";
         inputPrompt.SetActive(true);
     }
 

@@ -14,6 +14,9 @@ public class NPCTrigger : MonoBehaviour
     public GameObject GO_ResponseUI;
     public GameObject player;
 
+    public Character characterData;
+    public LLM_Interactable llm;
+
     public string NPCName;
 
     public string playerText;
@@ -36,24 +39,22 @@ public class NPCTrigger : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        Debug.Log("Entered Collider");
+        NPCResponseBoxManager.instance.currentLLM = llm;
         interactText.SetActive(true);
     }
     private void OnTriggerExit2D(Collider2D other)
     {
-        Debug.Log("Exited Collider");
         interactText.SetActive(false);
     }
 
     public void InputClose()
     {
         inputPrompt.SetActive(false);
-        //Send the request to the machine
-        playerText = "";
     }
 
     public void InputOpen()
     {
+        playerText = "";
         inputPrompt.SetActive(true);
     }
 
@@ -65,6 +66,7 @@ public class NPCTrigger : MonoBehaviour
     public void ResponseOpen()
     {
         GO_ResponseUI.SetActive(true);
+        NPCResponseBoxManager.instance.currentLLM.AskLLM(new LLM_Interactable.LLM_Message("Joueur", playerText), characterData);
     }
 
     public void OnUpdateText(string str)

@@ -44,12 +44,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bb952a77411394f4aa7d80ab5fe9e6d3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  canChage: 1
-  context: 'Vous devez maintenant imiter le joueur qui se parle a lui-meme. '
-  actions: Si le joueur ne possede pas la carte OPUS dans les variables globales,
-    vous direz que vous avez perdu la carte et il faudrait la retrouver. Si le joueur
-    possede la carte OPUS en variable globale, vous direz que vous etes content de
-    pouvoir enfin rentrer dans le metro et debloquerez la porte en meta-jeu.
+  genericPrompt: "Vous venez d'arriver aux gates du train et vous constatez que la
+    carte opus qui vous permet de passer manque dans votre poche. Vous vous dites
+    qu\xC8elle aurait du tomber de votre poche lorsque vous avez sorti votre cellulaire."
 --- !u!1001 &3621129548903400362
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -148,7 +145,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9192825884261743145, guid: d2429dda270873f429e9f1853a35fa52, type: 3}
       propertyPath: m_Name
-      value: Base Variant 2
+      value: Gate
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects:

@@ -7,6 +7,7 @@ public class NPCResponseBoxManager : MonoBehaviour
 {
     public static NPCResponseBoxManager instance;
     public TMP_Text header;
+    public LLM_Interactable currentLLM;
 
     private void Start()
     {
@@ -16,5 +17,10 @@ public class NPCResponseBoxManager : MonoBehaviour
     public void SetSpeakingCharacter(string name)
     {
         header.text = name;
+    }
+
+    public void SetLLM(LLM_Interactable llm)
+    {
+        currentLLM = llm;
     }
 }

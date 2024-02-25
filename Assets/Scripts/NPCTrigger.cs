@@ -5,15 +5,16 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
-
-
 public class NPCTrigger : MonoBehaviour
 {
     public BoxCollider2D NPC_Collider;
     public GameObject interactText;
     public GameObject inputPrompt;
-    public GameObject responseUI;
+    public ResponseUI responseUI;
+    public GameObject GO_ResponseUI;
     public GameObject player;
+
+    public string NPCName;
 
     public string playerText;
 
@@ -29,6 +30,7 @@ public class NPCTrigger : MonoBehaviour
         if(interactText.activeInHierarchy == true && Input.GetKey(KeyCode.E))
         {
             inputPrompt.SetActive(true);
+            NPCResponseBoxManager.instance.SetSpeakingCharacter(NPCName);
         }
     }
 
@@ -57,12 +59,12 @@ public class NPCTrigger : MonoBehaviour
 
     public void ResponseClose()
     {
-        responseUI.SetActive(false);
+        GO_ResponseUI.SetActive(false);
     }
 
     public void ResponseOpen()
     {
-        responseUI.SetActive(true);
+        GO_ResponseUI.SetActive(true);
     }
 
     public void OnUpdateText(string str)

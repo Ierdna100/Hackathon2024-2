@@ -1,0 +1,139 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &4681097073628866388
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 595516164880857728, guid: 7e17a7ad435e4ab448fe2c4cca0d74cd, type: 3}
+      propertyPath: NPCName
+      value: Gertrude
+      objectReference: {fileID: 0}
+    - target: {fileID: 595516164880857728, guid: 7e17a7ad435e4ab448fe2c4cca0d74cd, type: 3}
+      propertyPath: characterData
+      value: 
+      objectReference: {fileID: 5895373211967828596}
+    - target: {fileID: 1233216481573685761, guid: 7e17a7ad435e4ab448fe2c4cca0d74cd, type: 3}
+      propertyPath: m_Name
+      value: Gertrude Variant
+      objectReference: {fileID: 0}
+    - target: {fileID: 8183052976439531585, guid: 7e17a7ad435e4ab448fe2c4cca0d74cd, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 5a7dc5433bad8d9428fda0aa70111a6e, type: 3}
+    - target: {fileID: 8555622409443157228, guid: 7e17a7ad435e4ab448fe2c4cca0d74cd, type: 3}
+      propertyPath: m_Pivot.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8555622409443157228, guid: 7e17a7ad435e4ab448fe2c4cca0d74cd, type: 3}
+      propertyPath: m_Pivot.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8555622409443157228, guid: 7e17a7ad435e4ab448fe2c4cca0d74cd, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8555622409443157228, guid: 7e17a7ad435e4ab448fe2c4cca0d74cd, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8555622409443157228, guid: 7e17a7ad435e4ab448fe2c4cca0d74cd, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8555622409443157228, guid: 7e17a7ad435e4ab448fe2c4cca0d74cd, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8555622409443157228, guid: 7e17a7ad435e4ab448fe2c4cca0d74cd, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 8555622409443157228, guid: 7e17a7ad435e4ab448fe2c4cca0d74cd, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 8555622409443157228, guid: 7e17a7ad435e4ab448fe2c4cca0d74cd, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8555622409443157228, guid: 7e17a7ad435e4ab448fe2c4cca0d74cd, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8555622409443157228, guid: 7e17a7ad435e4ab448fe2c4cca0d74cd, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8555622409443157228, guid: 7e17a7ad435e4ab448fe2c4cca0d74cd, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8555622409443157228, guid: 7e17a7ad435e4ab448fe2c4cca0d74cd, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8555622409443157228, guid: 7e17a7ad435e4ab448fe2c4cca0d74cd, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8555622409443157228, guid: 7e17a7ad435e4ab448fe2c4cca0d74cd, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8555622409443157228, guid: 7e17a7ad435e4ab448fe2c4cca0d74cd, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -373.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8555622409443157228, guid: 7e17a7ad435e4ab448fe2c4cca0d74cd, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 134
+      objectReference: {fileID: 0}
+    - target: {fileID: 8555622409443157228, guid: 7e17a7ad435e4ab448fe2c4cca0d74cd, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8555622409443157228, guid: 7e17a7ad435e4ab448fe2c4cca0d74cd, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8555622409443157228, guid: 7e17a7ad435e4ab448fe2c4cca0d74cd, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 7869454881896952153, guid: 7e17a7ad435e4ab448fe2c4cca0d74cd, type: 3}
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 1233216481573685761, guid: 7e17a7ad435e4ab448fe2c4cca0d74cd, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 5895373211967828596}
+  m_SourcePrefab: {fileID: 100100000, guid: 7e17a7ad435e4ab448fe2c4cca0d74cd, type: 3}
+--- !u!1 &5903052699357654357 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1233216481573685761, guid: 7e17a7ad435e4ab448fe2c4cca0d74cd, type: 3}
+  m_PrefabInstance: {fileID: 4681097073628866388}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &5895373211967828596
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5903052699357654357}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 80957b8e28b18974f8e3be8195880682, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  genericPrompt: "Vous \xEAtes une madamme qui n'aimez pas parler aux \xE9trangers.
+    Lorsque le joueur vous demande s'il peut avoir sa carte opus, vous le renvovez
+    en lui disant qu'il avit qu'\xE0 ne pas la perdre. \xC0 chaque fois que quelqu'un
+    vous parle vous essayez de le blesser avec des insultes. Secr\xE8tement, vous
+    pensez que le contr\xF4leur est vraiment beau et voulez avoir son attention."
+  promptIfAskingCardShown: "Vous \xEAtes touch\xE9e par la carte que le conducteur
+    vous a donn\xE9 donc consentez a donner a carte OPUS perdue au joueur."

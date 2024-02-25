@@ -1,14 +1,16 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class InventorySlot : MonoBehaviour
 {
-    public Image slotImage;
+    public GameObject shownObject;
 
-    public void OnItemPickup(Item item)
+    public void OnPickedUpItem()
     {
-        slotImage = item.image;
+        // Mon dieu qu'on a pas de temps
+        shownObject.SetActive(true);
     }
 }

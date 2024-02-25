@@ -10,15 +10,17 @@ public class LLM_Rules : MonoBehaviour
         public bool askingCardPickedUp = false;
         public bool ticketPickedUp = false;
     }
-
+    
     public static LLM_Rules instance;
 
     public string rules;
+    public LLM_Message rulesCache;
+
     public GlobalVariables globalVariables = new();
 
     private void Start()
     {
         instance = this;
-        LLM_Manager.instance.AskLLM(new LLM_Message("Règlement", rules), null, null);
+        // LLM_Manager.instance.AskLLM(new LLM_Message("Jeu", rules), null, null, true);
     }
 }

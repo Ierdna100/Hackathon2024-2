@@ -14,7 +14,11 @@ public class NPCTrigger : MonoBehaviour
     public GameObject inputPrompt;
     public GameObject responseUI;
     public GameObject player;
+<<<<<<< Updated upstream
     public TMP_InputField abc;
+=======
+
+>>>>>>> Stashed changes
     public string playerText;
 
     void Awake()
@@ -47,7 +51,11 @@ public class NPCTrigger : MonoBehaviour
     {
         inputPrompt.SetActive(false);
         //Send the request to the machine
+<<<<<<< Updated upstream
         abc.text = "";
+=======
+        playerText = "";
+>>>>>>> Stashed changes
     }
 
     public void InputOpen()

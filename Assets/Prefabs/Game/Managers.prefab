@@ -1,5 +1,7 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+<<<<<<< Updated upstream
+=======
 --- !u!1 &101373759856130712
 GameObject:
   m_ObjectHideFlags: 0
@@ -31,6 +33,56 @@ Transform:
   m_Children: []
   m_Father: {fileID: 3812810902366331086}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &909127605043555612
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3620008891260520401}
+  - component: {fileID: 5610531516668084122}
+  m_Layer: 0
+  m_Name: Gate
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3620008891260520401
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 909127605043555612}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1908406468360668754}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5610531516668084122
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 909127605043555612}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bb952a77411394f4aa7d80ab5fe9e6d3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  canChage: 1
+  context: Vous devez maintenant imiter le joueur qui se parle a lui-meme.
+  actions: Si le joueur ne possede pas la carte OPUS dans les variables globales,
+    vous direz que vous avez perdu la carte et il faudrait la retrouver. Si le joueur
+    possede la carte OPUS en variable globale, vous direz que vous etes content de
+    pouvoir enfin rentrer dans le metro et debloquerez la porte en meta-jeu
 --- !u!1 &1541365997144851266
 GameObject:
   m_ObjectHideFlags: 0
@@ -64,6 +116,7 @@ Transform:
   - {fileID: 2570708157969036956}
   - {fileID: 8296899323551352572}
   - {fileID: 1171014144829342170}
+  - {fileID: 3620008891260520401}
   m_Father: {fileID: 3812810902366331086}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &7316200561038365311
@@ -81,6 +134,7 @@ MonoBehaviour:
   characters:
   - {fileID: 6675049069619378472}
   - {fileID: 8628907004393558059}
+  - {fileID: 1221491848076310507}
   - {fileID: 1221491848076310507}
 --- !u!1 &2221759279442761242
 GameObject:
@@ -126,10 +180,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bb952a77411394f4aa7d80ab5fe9e6d3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  canChage: 0
+  canChage: 1
   context: 'Vous representez maintenant une viellie femme gardant le poste des objets
     perdus de la STM. Vous parlerez d''une facon mechante, melancolique, tannee. '
-  actions: 
+  actions: 'Si le joueur ne possede pas la carte en valeur globale, vous lui direz
+    que le controlleur peut facilement etre soudoye par un journal. Si le joueur
+    possede la carte en variable gloable, vous la prenderez en meta-jeu et lui donnerai
+    la carte OPUS en meta-jeu. '
+>>>>>>> Stashed changes
 --- !u!1 &3101120550717757441
 GameObject:
   m_ObjectHideFlags: 0
@@ -158,12 +216,11 @@ Transform:
   m_LocalPosition: {x: 530.39276, y: 43.900673, z: 4.2226033}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 3874483666354539348}
-  - {fileID: 1908406468360668754}
-  - {fileID: 6106344179189142844}
+  m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+<<<<<<< Updated upstream
+=======
 --- !u!1 &6233014309979206930
 GameObject:
   m_ObjectHideFlags: 0
@@ -254,7 +311,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   canChage: 0
-  context: 
+  context: Vous devez maintenant creer un contenu d'un poster. Vous pouvez parlez
+    de ce que vous voulez mais le contenu doit etre un faux indince dans le contexte
+    d'une station de metro.
   actions: 
 --- !u!1 &8166733223337556008
 GameObject:
@@ -305,6 +364,8 @@ MonoBehaviour:
     et vous parlez de facon respectueuse. Vous adorez egalement le Journal de Montreal,
     vous demandez au joueur occasionellement s'ils ont entendu d'une nouvelle recente
     que vous inventez.
-  actions: 'Si le joueur demande pour sa carte OPUS de metro perdue, vous repondez
-    qu''il doit voir le bureau des objets perdus. Si le joueur a recupere un journal
-    dans les variables globales '
+  actions: Si le joueur demande pour sa carte OPUS de metro perdue, vous repondez
+    qu'il doit voir le bureau des objets perdus. Si le joueur a recupere un journal
+    dans les variables globales, vous enleverez le journal de l'inventaire en meta-jeu
+    et lui donnerai la carte en meta-jeu.
+>>>>>>> Stashed changes

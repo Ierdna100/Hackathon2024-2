@@ -4,5 +4,5 @@ using UnityEngine;
 
 public class CharacterManager : MonoBehaviour
 {
-    public Character[] characters;
+    public Character_Base[] characters;
 }

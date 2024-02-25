@@ -92,6 +92,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 19fa209cbaad8c143a23596295c80295, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  rules: "Ce message indique comment le mod\xE8le (vous) devez vous comportez. Vous
+    devez r\xE9pondre a un utilisateur qui demande des questions selon le contexte
+    qui vous sera donn\xE9. Suivrons une suite de messages qui d\xE9terminent votre
+    comportement. Un message dont le r\xF4le est \"Variables globales\" indique les
+    variables du jeu que vous devez respecter. Certaines actions d\xE9crites plus
+    bas sont conditionelles et peuvent ex\xE9cuter selon le status des \"Variables
+    globales\". Un message suivant dont le r\xF4le est \"Contexte\" d\xE9crit comment
+    votre prochain personnage que vous simulez doit se comporter. Un message suivant
+    dont le r\xF4le est \"Actions\" indique quelles actions vous sont disponibles.
+    Les actions qui mentionnent le m\xE9ta-jeu doivent absolument \xEAtre envoy\xE9es
+    dans un message diff\xE9rent avec le r\xF4le \"Meta\". Les actions qui sont dites
+    ou qui ne mentionnent pas le m\xE9ta-jeu doivent \xEAtre dites avec le r\xF4le
+    \"Jeu\". Les messages suivants jusqu'au dernier indiquent un cache des derniers
+    messages envoy\xE9s auparavant, qui ont un r\xF4le soit \"Joueur\", qui sont
+    des messages dis par l'utilisateur, soit \"Jeu\" ou \"meta\", dit par vous pr\xE9c\xE9demment,
+    en ordre."
 --- !u!1 &4158361459735456291
 GameObject:
   m_ObjectHideFlags: 0

@@ -2,7 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
-using UnityEngine;
+using UnityEngine; 
 using UnityEngine.UI;
 
 public class NPCTrigger : MonoBehaviour
@@ -40,6 +40,7 @@ public class NPCTrigger : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D other)
     {
         NPCResponseBoxManager.instance.currentLLM = llm;
+        responseUI.llm = llm;
         interactText.SetActive(true);
     }
     private void OnTriggerExit2D(Collider2D other)
@@ -66,6 +67,7 @@ public class NPCTrigger : MonoBehaviour
     public void ResponseOpen()
     {
         GO_ResponseUI.SetActive(true);
+        responseUI.llm = NPCResponseBoxManager.instance.currentLLM;
         NPCResponseBoxManager.instance.currentLLM.AskLLM(new LLM_Interactable.LLM_Message("Joueur", playerText), characterData);
     }
 

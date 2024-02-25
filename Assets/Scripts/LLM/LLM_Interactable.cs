@@ -45,7 +45,6 @@ public class LLM_Interactable : MonoBehaviour
         // data.messages.Add(new LLM_Message("Rôle", "PNJ"));
         data.messages.Add(new LLM_Message("Contexte", characterData.context));
         data.messages.Add(new LLM_Message("Actions", characterData.actions));
-        data.messages.Add(new LLM_Message("Actions", characterData.actions));
 
         foreach (LLM_Message msg in previousMessages)
         {
@@ -57,7 +56,7 @@ public class LLM_Interactable : MonoBehaviour
         // Prevent server crashes
         if (data.messages.Count == 0)
         {
-            data.messages.Add(new LLM_Message("user", ""));
+            data.messages.Add(new LLM_Message("ERREUR", ""));
             Debug.LogError("Message count was 0! This is not supposed happen! A filler message was added to prevent server crash.");
         }
         // End of going around terrible server code
@@ -83,8 +82,11 @@ public class LLM_Interactable : MonoBehaviour
                 break;
         }
 
-        previousMessages.Add(new LLM_Message("game", webRequest.downloadHandler.text));
         lastResponse = JsonConvert.DeserializeObject<LLM_InteractionResponse>(webRequest.downloadHandler.text);
+        foreach (Choice choice in lastResponse.choices)
+        {
+            previousMessages.Add(new LLM_Message(choice.message.role, choice.message.content));
+        }
     }
 
     public class LLM_Data

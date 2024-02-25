@@ -282,6 +282,7 @@ Transform:
   m_Children:
   - {fileID: 7156711885472522163}
   - {fileID: 8056593195755570398}
+  - {fileID: 6628585433193515702}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &8216803700328240135
@@ -337,3 +338,65 @@ MonoBehaviour:
     qu'il doit voir le bureau des objets perdus. Si le joueur a recupere un journal
     dans les variables globales, vous enleverez le journal de l'inventaire en meta-jeu
     et lui donnerai la carte en meta-jeu.
+--- !u!1001 &1671214602046004620
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 1931624849722715207}
+    m_Modifications:
+    - target: {fileID: 771752028453893508, guid: 169415e05b4c2a543a33a0d10e47bd94, type: 3}
+      propertyPath: m_Name
+      value: LLM_Manager
+      objectReference: {fileID: 0}
+    - target: {fileID: 5533850301526824762, guid: 169415e05b4c2a543a33a0d10e47bd94, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5533850301526824762, guid: 169415e05b4c2a543a33a0d10e47bd94, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5533850301526824762, guid: 169415e05b4c2a543a33a0d10e47bd94, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5533850301526824762, guid: 169415e05b4c2a543a33a0d10e47bd94, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5533850301526824762, guid: 169415e05b4c2a543a33a0d10e47bd94, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5533850301526824762, guid: 169415e05b4c2a543a33a0d10e47bd94, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5533850301526824762, guid: 169415e05b4c2a543a33a0d10e47bd94, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5533850301526824762, guid: 169415e05b4c2a543a33a0d10e47bd94, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5533850301526824762, guid: 169415e05b4c2a543a33a0d10e47bd94, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5533850301526824762, guid: 169415e05b4c2a543a33a0d10e47bd94, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 169415e05b4c2a543a33a0d10e47bd94, type: 3}
+--- !u!4 &6628585433193515702 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5533850301526824762, guid: 169415e05b4c2a543a33a0d10e47bd94, type: 3}
+  m_PrefabInstance: {fileID: 1671214602046004620}
+  m_PrefabAsset: {fileID: 0}

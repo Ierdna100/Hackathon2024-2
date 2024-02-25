@@ -26,16 +26,16 @@ public class LLM_Interactable : MonoBehaviour
         previousMessages = new List<LLM_Message>();
     }
 
-    public void AskLLM(string question)
+    public void AskLLM(LLM_Message message, Character characterData)
     {
         lastResponse = null;
-        StartCoroutine(GetLLMResponse(question));
+        StartCoroutine(GetLLMResponse(message));
     }
 
-    IEnumerator GetLLMResponse(string question)
+    IEnumerator GetLLMResponse(LLM_Message message)
     {
         var data = new LLM_Data();
-        data.messages.Add(new LLM_Message("joueur", question));
+        data.messages.Add(message);
 
         // Prevent server crashes
         if (data.messages.Count == 0)

@@ -5,15 +5,19 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
-
-
 public class NPCTrigger : MonoBehaviour
 {
     public BoxCollider2D NPC_Collider;
     public GameObject interactText;
     public GameObject inputPrompt;
-    public GameObject responseUI;
+    public ResponseUI responseUI;
+    public GameObject GO_ResponseUI;
     public GameObject player;
+
+    public Character characterData;
+    public LLM_Interactable llm;
+
+    public string NPCName;
 
     public string playerText;
 
@@ -29,40 +33,40 @@ public class NPCTrigger : MonoBehaviour
         if(interactText.activeInHierarchy == true && Input.GetKey(KeyCode.E))
         {
             inputPrompt.SetActive(true);
+            NPCResponseBoxManager.instance.SetSpeakingCharacter(NPCName);
         }
     }
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        Debug.Log("Entered Collider");
+        NPCResponseBoxManager.instance.currentLLM = llm;
         interactText.SetActive(true);
     }
     private void OnTriggerExit2D(Collider2D other)
     {
-        Debug.Log("Exited Collider");
         interactText.SetActive(false);
     }
 
     public void InputClose()
     {
         inputPrompt.SetActive(false);
-        //Send the request to the machine
-        playerText = "";
     }
 
     public void InputOpen()
     {
+        playerText = "";
         inputPrompt.SetActive(true);
     }
 
     public void ResponseClose()
     {
-        responseUI.SetActive(false);
+        GO_ResponseUI.SetActive(false);
     }
 
     public void ResponseOpen()
     {
-        responseUI.SetActive(true);
+        GO_ResponseUI.SetActive(true);
+        NPCResponseBoxManager.instance.currentLLM.AskLLM(new LLM_Interactable.LLM_Message("Joueur", playerText), characterData);
     }
 
     public void OnUpdateText(string str)

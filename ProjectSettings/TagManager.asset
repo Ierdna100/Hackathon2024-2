@@ -39,6 +39,18 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: Background
+    uniqueID: 2296888277
+    locked: 0
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Npcs
+    uniqueID: 3725736205
+    locked: 0
+  - name: Player
+    uniqueID: 2190563181
+    locked: 0
+  - name: Canvas
+    uniqueID: 2000025985
     locked: 0

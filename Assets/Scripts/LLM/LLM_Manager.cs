@@ -28,6 +28,7 @@ public class LLM_Manager : MonoBehaviour
     {
         var data = new LLM_Data();
 
+        data.messages.Add(new LLM_Message("Jeu", LLM_Rules.instance.rules));
         data.messages.Add(message);
 
         // Prevent server crashes

@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657844, g: 0.49641222, b: 0.57481676, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1297,6 +1297,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8841157212803564105, guid: 6c934aa14b60a9749abce372b780759f, type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8841157212803564105, guid: 6c934aa14b60a9749abce372b780759f, type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
+      value: 
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1349,6 +1357,19 @@ PrefabInstance:
     - target: {fileID: 1931624849722715207, guid: 68535c5ec2d2b6f449c63c711027c698, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3493413379768236832, guid: 68535c5ec2d2b6f449c63c711027c698, type: 3}
+      propertyPath: rules
+      value: "Ce message indique comment le mod\xE8le (vous) devez vous comportez.
+        Je repr\xE9sente le joueur et vous \xEAtes le Maitre du Jeu. Vous allez devoir
+        incorporer certains personnages diff\xE9rents tout au long du jeu. L\u2019histoire
+        du jeu suit: J\u2019ai perdu ma carte opus et je la cherche. Les diff\xE9rents
+        personnages peuvent me guider vers ma carte opus d\xE9pendaient des \u201CActions\u201D
+        que vous pouvez faire, qui seront mentionn\xE9s plus tard. Vous pouvez me
+        r\xE9pondre de deux mani\xE8res. Soit vous pouvez me r\xE9pondre normalement
+        en incarnant votre personnage assign\xE9 ou vous pouvez r\xE9pondre en m\xE9ta-jeu
+        en utilisant des \u201C[]\u201D. La r\xE9ponse en m\xE9ta-jeu vous permet
+        de changer les variables du jeu pour me permettre de progresser dans ma qu\xEAte"
       objectReference: {fileID: 0}
     - target: {fileID: 4158361459735456291, guid: 68535c5ec2d2b6f449c63c711027c698, type: 3}
       propertyPath: m_Name

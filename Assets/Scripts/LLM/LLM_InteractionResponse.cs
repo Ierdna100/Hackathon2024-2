@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class LLM_InteractionResponse
 {
-    public Choice[] choices;
+    public LLM_Choice[] choices;
     public int created;
     public string id;
     public string model;
-    public Usage usage;
+    public LLM_Usage usage;
 }

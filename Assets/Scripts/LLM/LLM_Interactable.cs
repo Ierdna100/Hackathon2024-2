@@ -12,6 +12,8 @@ public class LLM_Interactable : MonoBehaviour
     public static string URL = "http://localhost:8080";
     public static string APIEndpoint = "/v1/chat/completions";
 
+    public List<LLM_Message> previousMessages = new List<LLM_Message>();
+
     public LLM_InteractionResponse lastResponse;
 
     private void Awake()
@@ -19,23 +21,29 @@ public class LLM_Interactable : MonoBehaviour
         lastResponse = null;
     }
 
-    public void AskLLM()
+    public void ResetMessages()
     {
-        lastResponse = null;
-        StartCoroutine(GetLLMResponse());
+        previousMessages = new List<LLM_Message>();
     }
 
-    IEnumerator GetLLMResponse()
+    public void AskLLM(string question)
+    {
+        lastResponse = null;
+        StartCoroutine(GetLLMResponse(question));
+    }
+
+    IEnumerator GetLLMResponse(string question)
     {
         var data = new LLM_Data();
-        data.messages.Add(new LLM_Message("controlleurSTM", "allo"));
+        data.messages.Add(new LLM_Message("joueur", question));
 
         // Prevent server crashes
         if (data.messages.Count == 0)
         {
             data.messages.Add(new LLM_Message("user", ""));
-            Debug.LogError("Message count was 0!");
+            Debug.LogError("Message count was 0! This is not supposed happen! A filler message was added to prevent server crash.");
         }
+        // End of going around terrible server code
 
         string dataAsJson = JsonConvert.SerializeObject(data);
 
@@ -58,6 +66,7 @@ public class LLM_Interactable : MonoBehaviour
                 break;
         }
 
+        previousMessages.Add(new LLM_Message("game", webRequest.downloadHandler.text));
         lastResponse = JsonConvert.DeserializeObject<LLM_InteractionResponse>(webRequest.downloadHandler.text);
     }
 

@@ -1,5 +1,58 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &681061803524176283
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7200478409464210603}
+  - component: {fileID: 2732910780612096807}
+  m_Layer: 0
+  m_Name: Controlleur de la STM
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7200478409464210603
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 681061803524176283}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -457.75, y: -131, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1140479589428264290}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2732910780612096807
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 681061803524176283}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bb952a77411394f4aa7d80ab5fe9e6d3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  canChage: 1
+  context: Vous representez maintenant un controlleur de billets. Vous etes gentil
+    et vous parlez de facon respectueuse. Vous adorez egalement le Journal de Montreal,
+    vous demandez au joueur occasionellement s'ils ont entendu d'une nouvelle recente
+    que vous inventez.
+  actions: Si le joueur demande pour sa carte OPUS de metro perdue, vous repondez
+    qu'il doit voir le bureau des objets perdus. Si le joueur a recupere un journal
+    dans les variables globales, vous enleverez le journal de l'inventaire en meta-jeu
+    et lui donnerai la carte en meta-jeu.
 --- !u!1 &5624683934893741551
 GameObject:
   m_ObjectHideFlags: 0
@@ -301,6 +354,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 7200478409464210603}
   - {fileID: 249877330271322692}
   - {fileID: 4601845283288099274}
   m_Father: {fileID: 0}
@@ -409,7 +463,11 @@ MonoBehaviour:
   interactText: {fileID: 7511128718934353394}
   inputPrompt: {fileID: 0}
   responseUI: {fileID: 0}
+  GO_ResponseUI: {fileID: 0}
   player: {fileID: 0}
+  characterData: {fileID: 0}
+  llm: {fileID: 6631641558050223856}
+  NPCName: 
   playerText: 
 --- !u!114 &6631641558050223856
 MonoBehaviour:

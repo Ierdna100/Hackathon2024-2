@@ -58,6 +58,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 506305491551095459, guid: d2429dda270873f429e9f1853a35fa52, type: 3}
+      propertyPath: NPCName
+      value: "Barri\xE8re"
+      objectReference: {fileID: 0}
+    - target: {fileID: 506305491551095459, guid: d2429dda270873f429e9f1853a35fa52, type: 3}
+      propertyPath: characterData
+      value: 
+      objectReference: {fileID: 6250602396139911878}
     - target: {fileID: 1140479589428264290, guid: d2429dda270873f429e9f1853a35fa52, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5

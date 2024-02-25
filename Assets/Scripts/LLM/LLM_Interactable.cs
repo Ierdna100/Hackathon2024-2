@@ -8,8 +8,8 @@ using Newtonsoft.Json;
 [Serializable]
 public class LLM_Interactable : MonoBehaviour
 {
-    public static string URL = "http://blg21.iro.umontreal.ca:8080";
-    // public static string URL = "http://localhost:8080";
+    // public static string URL = "http://blg21.iro.umontreal.ca:8080";
+    public static string URL = "http://localhost:8080";
     public static string APIEndpoint = "/v1/chat/completions";
 
     public List<LLM_Message> previousMessages = new List<LLM_Message>();
@@ -42,7 +42,6 @@ public class LLM_Interactable : MonoBehaviour
             data.messages.Add(msg);
         }
 
-        // data.messages.Add(new LLM_Message("Rôle", "PNJ"));
         data.messages.Add(new LLM_Message("Contexte", characterData.context));
         data.messages.Add(new LLM_Message("Actions", characterData.actions));
 
@@ -50,7 +49,7 @@ public class LLM_Interactable : MonoBehaviour
         {
             data.messages.Add(msg);
         }
-
+        
         data.messages.Add(message);
 
         // Prevent server crashes
@@ -62,6 +61,7 @@ public class LLM_Interactable : MonoBehaviour
         // End of going around terrible server code
 
         string dataAsJson = JsonConvert.SerializeObject(data);
+        Debug.Log(dataAsJson);
 
         UnityWebRequest webRequest = UnityWebRequest.Post(URL + APIEndpoint, dataAsJson, "application/json");
         webRequest.SetRequestHeader("Authorization", "Bearer no-key");
@@ -83,6 +83,7 @@ public class LLM_Interactable : MonoBehaviour
         }
 
         lastResponse = JsonConvert.DeserializeObject<LLM_InteractionResponse>(webRequest.downloadHandler.text);
+
         foreach (Choice choice in lastResponse.choices)
         {
             previousMessages.Add(new LLM_Message(choice.message.role, choice.message.content));

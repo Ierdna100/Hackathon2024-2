@@ -13,7 +13,7 @@ public class LLM_Rules : MonoBehaviour
     public static LLM_Rules instance;
 
     public string rules;
-    public GlobalVariables globalVariables;
+    public GlobalVariables globalVariables = new GlobalVariables();
 
     private void Start()
     {

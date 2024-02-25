@@ -15,7 +15,7 @@ public class InventoryManager : MonoBehaviour
     private void Awake()
     {
         instance = this;
-        paths = new String["Assets/Sprites/Items/news.png", "Assets/Sprites/Items/flower.png", "Assets/Sprites/Items/Card1.png"];
+        // paths = new String["Assets/Sprites/Items/news.png", "Assets/Sprites/Items/flower.png", "Assets/Sprites/Items/Card1.png"];
     }
 
 

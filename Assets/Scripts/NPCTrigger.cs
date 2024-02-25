@@ -31,6 +31,7 @@ public class NPCTrigger : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
+        Debug.Log("Entered");
         interactText.SetActive(true);
         NPCResponseBoxManager.instance.currentLLM = llm;
     }

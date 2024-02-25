@@ -7,10 +7,8 @@ public class InventorySlot : MonoBehaviour
 {
     public Image slotImage;
 
-    public OnItemPickup(Item item)
+    public void OnItemPickup(Item item)
     {
         slotImage = item.image;
-
     }
-
 }

@@ -5,6 +5,5 @@ using UnityEngine.UI;
 
 public class Item : MonoBehaviour
 {
-    public Image imgae;
-
+    public Image image;
 }

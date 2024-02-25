@@ -13,6 +13,11 @@ public class LLM_Manager : MonoBehaviour
 
     public LLM_InteractionResponse lastResponse;
 
+    private void Awake()
+    {
+        instance = this;
+    }
+
     public void AskLLM(LLM_Message message, Character_Base characterData, List<LLM_Message> previousMessages)
     {
         lastResponse = null;

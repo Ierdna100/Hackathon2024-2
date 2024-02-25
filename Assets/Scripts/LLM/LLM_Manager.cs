@@ -28,10 +28,14 @@ public class LLM_Manager : MonoBehaviour
     {
         var data = new LLM_Data();
 
+        /*
         if (!setup)
         {
             data.messages.Add(LLM_Rules.instance.rulesCache);
         }
+        */
+
+        data.messages.AddRange(previousMessages);
         data.messages.Add(message);
 
         // Prevent server crashes
@@ -66,10 +70,12 @@ public class LLM_Manager : MonoBehaviour
 
         lastResponse = JsonConvert.DeserializeObject<LLM_InteractionResponse>(webRequest.downloadHandler.text);
 
+        /*
         if (setup)
         {
             LLM_Rules.instance.rulesCache = lastResponse.choices[0].message;
         }
+        */
 
         if (previousMessages == null)
         {

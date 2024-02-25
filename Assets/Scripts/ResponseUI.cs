@@ -18,9 +18,9 @@ public class ResponseUI : MonoBehaviour
 
         foreach (Choice choice in llm.lastResponse.choices)
         {
-            Debug.Log("> " + choice.message);
+            Debug.Log("> " + choice.message.content);
         }
 
-        text.text = "Done!";
+        text.text = llm.lastResponse.choices[0].message.content;
     }
 }

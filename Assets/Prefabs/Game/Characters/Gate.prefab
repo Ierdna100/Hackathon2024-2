@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &2461960090288215595
+--- !u!1 &7332775562834546770
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,45 +8,49 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 687047818611635907}
-  - component: {fileID: 6803409742757285465}
+  - component: {fileID: 8288280326317681429}
+  - component: {fileID: 6250602396139911878}
   m_Layer: 0
-  m_Name: Gertrude (1)
+  m_Name: Gate
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &687047818611635907
+--- !u!4 &8288280326317681429
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2461960090288215595}
+  m_GameObject: {fileID: 7332775562834546770}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -457.75, y: -131, z: 0}
+  m_LocalPosition: {x: -57.25, y: -114.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 6514862993387456176}
+  m_Father: {fileID: 4436918676355727048}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &6803409742757285465
+--- !u!114 &6250602396139911878
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2461960090288215595}
+  m_GameObject: {fileID: 7332775562834546770}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 80957b8e28b18974f8e3be8195880682, type: 3}
+  m_Script: {fileID: 11500000, guid: bb952a77411394f4aa7d80ab5fe9e6d3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  genericPrompt: 
-  promptIfAskingCardShown: 
---- !u!1001 &6177457942678666194
+  canChage: 1
+  context: 'Vous devez maintenant imiter le joueur qui se parle a lui-meme. '
+  actions: Si le joueur ne possede pas la carte OPUS dans les variables globales,
+    vous direz que vous avez perdu la carte et il faudrait la retrouver. Si le joueur
+    possede la carte OPUS en variable globale, vous direz que vous etes content de
+    pouvoir enfin rentrer dans le metro et debloquerez la porte en meta-jeu.
+--- !u!1001 &3621129548903400362
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -56,8 +60,12 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 506305491551095459, guid: d2429dda270873f429e9f1853a35fa52, type: 3}
       propertyPath: NPCName
-      value: Gertrude
+      value: "Barri\xE8re"
       objectReference: {fileID: 0}
+    - target: {fileID: 506305491551095459, guid: d2429dda270873f429e9f1853a35fa52, type: 3}
+      propertyPath: characterData
+      value: 
+      objectReference: {fileID: 6250602396139911878}
     - target: {fileID: 1140479589428264290, guid: d2429dda270873f429e9f1853a35fa52, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -84,11 +92,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1140479589428264290, guid: d2429dda270873f429e9f1853a35fa52, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 62.7
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 1140479589428264290, guid: d2429dda270873f429e9f1853a35fa52, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 74.4
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 1140479589428264290, guid: d2429dda270873f429e9f1853a35fa52, type: 3}
       propertyPath: m_LocalPosition.x
@@ -120,11 +128,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1140479589428264290, guid: d2429dda270873f429e9f1853a35fa52, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -411
+      value: -434
       objectReference: {fileID: 0}
     - target: {fileID: 1140479589428264290, guid: d2429dda270873f429e9f1853a35fa52, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -137.5
+      value: -139
       objectReference: {fileID: 0}
     - target: {fileID: 1140479589428264290, guid: d2429dda270873f429e9f1853a35fa52, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -138,37 +146,22 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4601845283288099274, guid: d2429dda270873f429e9f1853a35fa52, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 73.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 5338128051079989343, guid: d2429dda270873f429e9f1853a35fa52, type: 3}
-      propertyPath: m_text
-      value: Gertrude
-      objectReference: {fileID: 0}
-    - target: {fileID: 5373756144798831075, guid: d2429dda270873f429e9f1853a35fa52, type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 21300000, guid: 5a7dc5433bad8d9428fda0aa70111a6e, type: 3}
-    - target: {fileID: 5624683934893741551, guid: d2429dda270873f429e9f1853a35fa52, type: 3}
-      propertyPath: m_Name
-      value: Gertrude
-      objectReference: {fileID: 0}
     - target: {fileID: 9192825884261743145, guid: d2429dda270873f429e9f1853a35fa52, type: 3}
       propertyPath: m_Name
-      value: Gertrude
+      value: Base Variant 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects:
+    - {fileID: 5624683934893741551, guid: d2429dda270873f429e9f1853a35fa52, type: 3}
     - {fileID: 681061803524176283, guid: d2429dda270873f429e9f1853a35fa52, type: 3}
     m_AddedGameObjects:
     - targetCorrespondingSourceObject: {fileID: 1140479589428264290, guid: d2429dda270873f429e9f1853a35fa52, type: 3}
       insertIndex: 0
-      addedObject: {fileID: 687047818611635907}
+      addedObject: {fileID: 8288280326317681429}
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d2429dda270873f429e9f1853a35fa52, type: 3}
---- !u!224 &6514862993387456176 stripped
+--- !u!224 &4436918676355727048 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 1140479589428264290, guid: d2429dda270873f429e9f1853a35fa52, type: 3}
-  m_PrefabInstance: {fileID: 6177457942678666194}
+  m_PrefabInstance: {fileID: 3621129548903400362}
   m_PrefabAsset: {fileID: 0}

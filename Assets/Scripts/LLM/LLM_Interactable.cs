@@ -8,8 +8,8 @@ using Newtonsoft.Json;
 [Serializable]
 public class LLM_Interactable : MonoBehaviour
 {
-    // public static string URL = "http://blg21.iro.umontreal.ca:8080";
-    public static string URL = "http://localhost:8080";
+    public static string URL = "http://blg21.iro.umontreal.ca:8080";
+    // public static string URL = "http://localhost:8080";
     public static string APIEndpoint = "/v1/chat/completions";
 
     public List<LLM_Message> previousMessages = new List<LLM_Message>();
@@ -26,29 +26,16 @@ public class LLM_Interactable : MonoBehaviour
         previousMessages = new List<LLM_Message>();
     }
 
-    public void AskLLM(LLM_Message message, Character characterData)
+    public void AskLLM(LLM_Message message, Character_Base characterData)
     {
         lastResponse = null;
         StartCoroutine(GetLLMResponse(message, characterData));
     }
 
-    IEnumerator GetLLMResponse(LLM_Message message, Character characterData)
+    IEnumerator GetLLMResponse(LLM_Message message, Character_Base characterData)
     {
         var data = new LLM_Data();
         data.messages.Add(new LLM_Message("Règlement", LLM_Rules.instance.rules));
-
-        foreach(LLM_Message msg in LLM_Rules.instance.GetGameRulesAsMessages())
-        {
-            data.messages.Add(msg);
-        }
-
-        data.messages.Add(new LLM_Message("Contexte", characterData.context));
-        data.messages.Add(new LLM_Message("Actions", characterData.actions));
-
-        foreach (LLM_Message msg in previousMessages)
-        {
-            data.messages.Add(msg);
-        }
         
         data.messages.Add(message);
 

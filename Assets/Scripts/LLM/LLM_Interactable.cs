@@ -29,23 +29,39 @@ public class LLM_Interactable : MonoBehaviour
     public void AskLLM(LLM_Message message, Character characterData)
     {
         lastResponse = null;
-        StartCoroutine(GetLLMResponse(message));
+        StartCoroutine(GetLLMResponse(message, characterData));
     }
 
-    IEnumerator GetLLMResponse(LLM_Message message)
+    IEnumerator GetLLMResponse(LLM_Message message, Character characterData)
     {
         var data = new LLM_Data();
+        data.messages.Add(new LLM_Message("Règlement", LLM_Rules.instance.rules));
+
+        foreach(LLM_Message msg in LLM_Rules.instance.GetGameRulesAsMessages())
+        {
+            data.messages.Add(msg);
+        }
+
+        data.messages.Add(new LLM_Message("Contexte", characterData.context));
+        data.messages.Add(new LLM_Message("Actions", characterData.actions));
+
+        foreach (LLM_Message msg in previousMessages)
+        {
+            data.messages.Add(msg);
+        }
+        
         data.messages.Add(message);
 
         // Prevent server crashes
         if (data.messages.Count == 0)
         {
-            data.messages.Add(new LLM_Message("user", ""));
+            data.messages.Add(new LLM_Message("ERREUR", ""));
             Debug.LogError("Message count was 0! This is not supposed happen! A filler message was added to prevent server crash.");
         }
         // End of going around terrible server code
 
         string dataAsJson = JsonConvert.SerializeObject(data);
+        Debug.Log(dataAsJson);
 
         UnityWebRequest webRequest = UnityWebRequest.Post(URL + APIEndpoint, dataAsJson, "application/json");
         webRequest.SetRequestHeader("Authorization", "Bearer no-key");
@@ -66,8 +82,12 @@ public class LLM_Interactable : MonoBehaviour
                 break;
         }
 
-        previousMessages.Add(new LLM_Message("game", webRequest.downloadHandler.text));
         lastResponse = JsonConvert.DeserializeObject<LLM_InteractionResponse>(webRequest.downloadHandler.text);
+
+        foreach (Choice choice in lastResponse.choices)
+        {
+            previousMessages.Add(new LLM_Message(choice.message.role, choice.message.content));
+        }
     }
 
     public class LLM_Data

@@ -459,16 +459,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 52d7b8412540b48d0a882acdf5b4041b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  NPC_Collider: {fileID: 0}
+  NPC_Collider: {fileID: 865802600863335631}
   interactText: {fileID: 7511128718934353394}
-  inputPrompt: {fileID: 0}
-  responseUI: {fileID: 0}
-  GO_ResponseUI: {fileID: 0}
-  player: {fileID: 0}
-  characterData: {fileID: 0}
+  characterData: {fileID: 2732910780612096807}
   llm: {fileID: 6631641558050223856}
-  NPCName: 
-  playerText: 
+  NPCName: Policier
 --- !u!114 &6631641558050223856
 MonoBehaviour:
   m_ObjectHideFlags: 0

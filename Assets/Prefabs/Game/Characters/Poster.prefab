@@ -44,8 +44,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bb952a77411394f4aa7d80ab5fe9e6d3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  genericPrompt: "Vous devez g\xE9n\xE9rer une annonce sur un vol d'un magazin de
-    souliers mais seulement les souliers gauches ont \xE9t\xE9 enlev\xE9s. Mentionner
+  genericPrompt: "Vous devez g\xE9n\xE9rer une annonce sur un crime commis. Mentionner
     le nom du principal suspect ainsi que l'auto dans laquelle il \xE9tait."
 --- !u!1001 &5181082415797624641
 PrefabInstance:

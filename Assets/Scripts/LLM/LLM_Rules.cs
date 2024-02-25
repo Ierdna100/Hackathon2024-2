@@ -19,5 +19,6 @@ public class LLM_Rules : MonoBehaviour
     private void Start()
     {
         instance = this;
+        LLM_Manager.instance.AskLLM(new LLM_Message("Règlement", rules), null, null);
     }
 }

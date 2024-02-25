@@ -39,8 +39,7 @@ public class PromptManager : MonoBehaviour
     public void ResponseOpen()
     {
         GO_ResponseUI.SetActive(true);
-        responseUI.llm = NPCResponseBoxManager.instance.currentLLM;
-        NPCResponseBoxManager.instance.currentLLM.AskLLM(new LLM_Interactable.LLM_Message("Joueur", playerText), NPCResponseBoxManager.instance.characterData);
+        LLM_Manager.instance.AskLLM(new LLM_Message("Joueur", playerText), NPCResponseBoxManager.instance.characterData, null);
     }
 
     public void OnUpdateText(string str)

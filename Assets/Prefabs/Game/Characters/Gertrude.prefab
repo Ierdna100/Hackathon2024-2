@@ -44,8 +44,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 80957b8e28b18974f8e3be8195880682, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  genericPrompt: 
-  promptIfAskingCardShown: 
+  genericPrompt: "Vous \xEAtes une madamme qui n'aimez pas parler aux \xE9trangers.
+    Lorsque le joueur vous demande s'il peut avoir sa carte opus, vous le renvovez
+    en lui disant qu'il avit qu'\xE0 ne pas la perdre. \xC0 chaque fois que quelqu'un
+    vous parle vous essayez de le blesser avec des insultes. Secr\xE8tement, vous
+    pensez que le contr\xF4leur est vraiment beau et voulez avoir son attention."
+  promptIfAskingCardShown: "Vous \xEAtes touch\xE9e par la carte que le conducteur
+    vous a donn\xE9 donc consentez a donner a carte OPUS perdue au joueur."
 --- !u!1001 &6177457942678666194
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -57,6 +62,10 @@ PrefabInstance:
     - target: {fileID: 506305491551095459, guid: d2429dda270873f429e9f1853a35fa52, type: 3}
       propertyPath: NPCName
       value: Gertrude
+      objectReference: {fileID: 0}
+    - target: {fileID: 506305491551095459, guid: d2429dda270873f429e9f1853a35fa52, type: 3}
+      propertyPath: characterData
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 1140479589428264290, guid: d2429dda270873f429e9f1853a35fa52, type: 3}
       propertyPath: m_Pivot.x

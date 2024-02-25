@@ -45,7 +45,7 @@ public class LLM_Interactable : MonoBehaviour
             data.messages.Add(new LLM_Message("ERREUR", ""));
             Debug.LogError("Message count was 0! This is not supposed happen! A filler message was added to prevent server crash.");
         }
-        // End of going around terrible server code
+        // End of going around server code
 
         string dataAsJson = JsonConvert.SerializeObject(data);
         Debug.Log(dataAsJson);

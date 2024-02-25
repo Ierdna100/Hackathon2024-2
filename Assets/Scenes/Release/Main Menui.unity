@@ -303,6 +303,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5b49354dba6685f6493468ff1f09861e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  scenename: 
 --- !u!114 &459386393
 MonoBehaviour:
   m_ObjectHideFlags: 0

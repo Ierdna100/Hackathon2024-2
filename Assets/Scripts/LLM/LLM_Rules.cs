@@ -21,6 +21,6 @@ public class LLM_Rules : MonoBehaviour
     private void Start()
     {
         instance = this;
-        LLM_Manager.instance.AskLLM(new LLM_Message("Jeu", rules), null, null, true);
+        // LLM_Manager.instance.AskLLM(new LLM_Message("Jeu", rules), null, null, true);
     }
 }

@@ -1,28 +1,72 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 
 
 public class NPCTrigger : MonoBehaviour
 {
     public BoxCollider2D NPC_Collider;
-    public TextMeshProUGUI interactText;
+    public GameObject interactText;
+    public GameObject inputPrompt;
+    public GameObject responseUI;
+    public GameObject player;
+    public TMP_InputField abc;
+    public string playerText;
 
     void Awake()
     {
-        interactText.enabled = false;
+        interactText.SetActive(false);
+        InputClose();
+        ResponseClose();
+    }
+
+    void Update()
+    {
+        if(interactText.activeInHierarchy == true && Input.GetKey(KeyCode.E))
+        {
+            inputPrompt.SetActive(true);
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D other)
     {
         Debug.Log("Entered Collider");
-        interactText.enabled = true;
+        interactText.SetActive(true);
     }
     private void OnTriggerExit2D(Collider2D other)
     {
         Debug.Log("Exited Collider");
-        interactText.enabled = false;
+        interactText.SetActive(false);
+    }
+
+    public void InputClose()
+    {
+        inputPrompt.SetActive(false);
+        //Send the request to the machine
+        abc.text = "";
+    }
+
+    public void InputOpen()
+    {
+        inputPrompt.SetActive(true);
+    }
+
+    public void ResponseClose()
+    {
+        responseUI.SetActive(false);
+    }
+
+    public void ResponseOpen()
+    {
+        responseUI.SetActive(true);
+    }
+
+    public void OnUpdateText(string str)
+    {
+        playerText = str;
     }
 }

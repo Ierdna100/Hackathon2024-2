@@ -21,6 +21,6 @@ public class ResponseUI : MonoBehaviour
             Debug.Log("> " + choice.message.content);
         }
 
-        text.text = "Done!";
+        text.text = llm.lastResponse.choices[0].message.content;
     }
 }

@@ -8,14 +8,14 @@ public class NPCResponseBoxManager : MonoBehaviour
     public static NPCResponseBoxManager instance;
     public TMP_Text header;
     public LLM_Interactable currentLLM;
-    public Character characterData;
+    public Character_Base characterData;
 
     private void Start()
     {
         instance = this;
     }
 
-    public void OnChangeTarget(string name, LLM_Interactable llm, Character characterData)
+    public void OnChangeTarget(string name, LLM_Interactable llm, Character_Base characterData)
     {
         header.text = name;
         currentLLM = llm;

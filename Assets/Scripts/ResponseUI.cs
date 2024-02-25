@@ -10,17 +10,17 @@ public class ResponseUI : MonoBehaviour
 
     private void Update()
     {
-        if (llm.lastResponse == null)
+        if (LLM_Manager.instance.lastResponse == null)
         {
             text.text = "...";
             return;
         }
 
-        foreach (Choice choice in llm.lastResponse.choices)
+        foreach (LLM_Choice choice in LLM_Manager.instance.lastResponse.choices)
         {
             Debug.Log("> " + choice.message.content);
         }
 
-        text.text = "Done!";
+        text.text = LLM_Manager.instance.lastResponse.choices[0].message.content;
     }
 }

@@ -96,7 +96,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 19fa209cbaad8c143a23596295c80295, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rules: Ici il y aura les regles
+  rules: "Ce message indique comment le mod\xE8le (vous) devez vous comportez. Vous
+    devez r\xE9pondre a un utilisateur qui demande des questions selon le contexte
+    qui vous sera donn\xE9. Suivrons une suite de messages qui d\xE9terminent votre
+    comportement. Un message dont le r\xF4le est \"Variables globales\" indique les
+    variables du jeu que vous devez respecter. Certaines actions d\xE9crites plus
+    bas sont conditionelles et peuvent ex\xE9cuter selon le status des \"Variables
+    globales\". Un message suivant dont le r\xF4le est \"Contexte\" d\xE9crit comment
+    votre prochain personnage que vous simulez doit se comporter. Un message suivant
+    dont le r\xF4le est \"Actions\" indique quelles actions vous sont disponibles.
+    Les actions qui mentionnent le m\xE9ta-jeu doivent absolument \xEAtre envoy\xE9es
+    dans un message diff\xE9rent avec le r\xF4le \"Meta\". Les actions qui sont dites
+    ou qui ne mentionnent pas le m\xE9ta-jeu doivent \xEAtre dites avec le r\xF4le
+    \"Jeu\". Les messages suivants jusqu'au dernier indiquent un cache des derniers
+    messages envoy\xE9s auparavant, qui ont un r\xF4le soit \"Joueur\", qui sont
+    des messages dis par l'utilisateur, soit \"Jeu\" ou \"meta\", dit par vous pr\xE9c\xE9demment,
+    en ordre."
 --- !u!1 &4158361459735456291
 GameObject:
   m_ObjectHideFlags: 0
@@ -128,5 +143,50 @@ Transform:
   m_Children:
   - {fileID: 7156711885472522163}
   - {fileID: 4127618901430085129}
+  - {fileID: 6073222070478590766}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &6586391564710511048
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6073222070478590766}
+  - component: {fileID: 1266362642004704902}
+  m_Layer: 0
+  m_Name: LLM_Manager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6073222070478590766
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6586391564710511048}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.79919434, y: -132.44275, z: 13.249458}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1931624849722715207}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1266362642004704902
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6586391564710511048}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8275ef3145ea8d449b1be762f38c157a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

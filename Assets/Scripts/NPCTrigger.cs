@@ -10,7 +10,7 @@ public class NPCTrigger : MonoBehaviour
     public BoxCollider2D NPC_Collider;
     public GameObject interactText;
 
-    public Character characterData;
+    public Character_Base characterData;
     public LLM_Interactable llm;
 
     public string NPCName;

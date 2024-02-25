@@ -1,53 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &7332775562834546770
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 8288280326317681429}
-  - component: {fileID: 6250602396139911878}
-  m_Layer: 0
-  m_Name: Gate
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &8288280326317681429
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7332775562834546770}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -57.25, y: -114.5, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 4436918676355727048}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &6250602396139911878
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7332775562834546770}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bb952a77411394f4aa7d80ab5fe9e6d3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  genericPrompt: "Vous venez d'arriver aux gates du train et vous constatez que la
-    carte opus qui vous permet de passer manque dans votre poche. Vous vous dites
-    qu\xC8elle aurait du tomber de votre poche lorsque vous avez sorti votre cellulaire."
---- !u!1001 &3621129548903400362
+--- !u!1001 &2118915712123582107
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -56,13 +9,9 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 506305491551095459, guid: d2429dda270873f429e9f1853a35fa52, type: 3}
-      propertyPath: NPCName
-      value: "Barri\xE8re"
-      objectReference: {fileID: 0}
-    - target: {fileID: 506305491551095459, guid: d2429dda270873f429e9f1853a35fa52, type: 3}
       propertyPath: characterData
       value: 
-      objectReference: {fileID: 6250602396139911878}
+      objectReference: {fileID: 0}
     - target: {fileID: 1140479589428264290, guid: d2429dda270873f429e9f1853a35fa52, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -125,11 +74,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1140479589428264290, guid: d2429dda270873f429e9f1853a35fa52, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -434
+      value: -475.5
       objectReference: {fileID: 0}
     - target: {fileID: 1140479589428264290, guid: d2429dda270873f429e9f1853a35fa52, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -139
+      value: -120.6
       objectReference: {fileID: 0}
     - target: {fileID: 1140479589428264290, guid: d2429dda270873f429e9f1853a35fa52, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -145,20 +94,38 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9192825884261743145, guid: d2429dda270873f429e9f1853a35fa52, type: 3}
       propertyPath: m_Name
-      value: Gate
+      value: STMController
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects:
-    - {fileID: 5624683934893741551, guid: d2429dda270873f429e9f1853a35fa52, type: 3}
-    - {fileID: 681061803524176283, guid: d2429dda270873f429e9f1853a35fa52, type: 3}
-    m_AddedGameObjects:
-    - targetCorrespondingSourceObject: {fileID: 1140479589428264290, guid: d2429dda270873f429e9f1853a35fa52, type: 3}
-      insertIndex: 0
-      addedObject: {fileID: 8288280326317681429}
-    m_AddedComponents: []
+    m_RemovedComponents:
+    - {fileID: 2732910780612096807, guid: d2429dda270873f429e9f1853a35fa52, type: 3}
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 681061803524176283, guid: d2429dda270873f429e9f1853a35fa52, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 8629501875231460074}
   m_SourcePrefab: {fileID: 100100000, guid: d2429dda270873f429e9f1853a35fa52, type: 3}
---- !u!224 &4436918676355727048 stripped
-RectTransform:
-  m_CorrespondingSourceObject: {fileID: 1140479589428264290, guid: d2429dda270873f429e9f1853a35fa52, type: 3}
-  m_PrefabInstance: {fileID: 3621129548903400362}
+--- !u!1 &1446913901764251392 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 681061803524176283, guid: d2429dda270873f429e9f1853a35fa52, type: 3}
+  m_PrefabInstance: {fileID: 2118915712123582107}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &8629501875231460074
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1446913901764251392}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5dd161c8fc380a489f09844575cd7c8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  genericPrompt: "Vous adorez lire les journaux pour rester inform\xE9 sur les choses
+    qui se passent dans le monde. Vous aimez partager les nouvelles avec les personnes
+    qui parlent avec vous. \xCAtes en bonne relation avec Gertrude et cherche a capter
+    son attention."
+  promptIfNewspaperAcquired: "Vous lisez \xE0 voix haute un passage intriguant du
+    journal que le joueur vous a donn\xE9 et vous devez donner la carte que vous
+    avez prepar\xE9 pour Gertrude au joueur."

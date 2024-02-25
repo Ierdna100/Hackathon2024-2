@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 687047818611635907}
-  - component: {fileID: 2579850145115869781}
+  - component: {fileID: 6803409742757285465}
   m_Layer: 0
   m_Name: Gertrude (1)
   m_TagString: Untagged
@@ -32,7 +32,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 6514862993387456176}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2579850145115869781
+--- !u!114 &6803409742757285465
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -41,16 +41,16 @@ MonoBehaviour:
   m_GameObject: {fileID: 2461960090288215595}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bb952a77411394f4aa7d80ab5fe9e6d3, type: 3}
+  m_Script: {fileID: 11500000, guid: 80957b8e28b18974f8e3be8195880682, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  canChage: 1
-  context: Vous representez maintenant une viellie femme gardant le poste des objets
-    perdus de la STM. Vous parlerez d''une facon mechante, melancolique, tannee.
-  actions: Si le joueur ne possede pas la carte en valeur globale, vous lui direz
-    que le controlleur peut facilement etre soudoye par un journal. Si le joueur
-    possede la carte en variable gloable, vous la prenderez en meta-jeu et lui donnerai
-    la carte OPUS en meta-jeu.
+  genericPrompt: "Vous \xEAtes une madamme qui n'aimez pas parler aux \xE9trangers.
+    Lorsque le joueur vous demande s'il peut avoir sa carte opus, vous le renvovez
+    en lui disant qu'il avit qu'\xE0 ne pas la perdre. \xC0 chaque fois que quelqu'un
+    vous parle vous essayez de le blesser avec des insultes. Secr\xE8tement, vous
+    pensez que le contr\xF4leur est vraiment beau et voulez avoir son attention."
+  promptIfAskingCardShown: "Vous \xEAtes touch\xE9e par la carte que le conducteur
+    vous a donn\xE9 donc consentez a donner a carte OPUS perdue au joueur."
 --- !u!1001 &6177457942678666194
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -66,7 +66,7 @@ PrefabInstance:
     - target: {fileID: 506305491551095459, guid: d2429dda270873f429e9f1853a35fa52, type: 3}
       propertyPath: characterData
       value: 
-      objectReference: {fileID: 2579850145115869781}
+      objectReference: {fileID: 0}
     - target: {fileID: 1140479589428264290, guid: d2429dda270873f429e9f1853a35fa52, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -165,7 +165,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9192825884261743145, guid: d2429dda270873f429e9f1853a35fa52, type: 3}
       propertyPath: m_Name
-      value: Base Variant
+      value: Gertrude
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects:
